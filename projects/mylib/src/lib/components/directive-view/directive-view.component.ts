@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from "@angular/core";
+import { MylibService } from "../../mylib.service";
 
 @Component({
   selector: "lib-directive-view",
@@ -6,9 +7,11 @@ import { Component, OnInit, Input } from "@angular/core";
   styleUrls: ["./directive-view.component.css"]
 })
 export class DirectiveViewComponent implements OnInit {
-  @Input() input: String;
+  input: String;
 
-  constructor() {}
+  constructor(private myLibService: MylibService) {
+    this.input = myLibService.getInput();
+  }
 
   ngOnInit() {
     console.log(this.input);
