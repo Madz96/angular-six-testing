@@ -10,5 +10,7 @@ export class DirectiveViewComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log(this.input);
+  }
 }
