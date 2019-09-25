@@ -1,11 +1,9 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+import { MylibModule } from "node_modules/mylib";
 
 import { AppComponent } from "./app.component";
-
-import { MylibModule } from "mylib";
-import { MylibService } from "mylib";
-import { MainComponent } from './components/main/main.component';
+import { MainComponent } from "./components/main/main.component";
 
 @NgModule({
   declarations: [AppComponent, MainComponent],
